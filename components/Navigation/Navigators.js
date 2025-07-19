@@ -24,6 +24,7 @@ function StackNavigator1() {
             <Stack.Screen name='BalanceScreen' component={Balance} options={{ headerShown: false }} />
             <Stack.Screen name='LifeCover' component={Life} options={{ headerShown: false }} />
             <Stack.Screen name='Equity' component={Invest} options={{ headerShown: false }} />
+            <Stack.Screen name='Transact_opt' component={Screen} options={{ headerShown: false }} />
         </Stack.Navigator>
     )
 }
@@ -44,7 +45,7 @@ function BottomNavigator() {
             <Bottom.Screen name='Home' component={StackNavigator1} options={{ headerShown: false, tabBarIcon: () => <Image source={require('../../assets/images/earth.png')} width={'100%'} height={10} style={{ width: 23, height: 22, }} /> }} />
             <Bottom.Screen name='Transact' component={TransactStack} options={{ headerShown: false, tabBarIcon: () => <Image source={require('../../assets/images/coins.png')} width={'100%'} height={10} style={{ width: 23, height: 22, }} /> }} />
             <Bottom.Screen name='Notifications' component={Notifications} options={{ headerShown: false, tabBarIcon: () => <Image source={require('../../assets/images/calendar.png')} width={'100%'} height={10} style={{ width: 23, height: 22, }} /> }} />
-            <Bottom.Screen name='Cards' component={Cards} options={{ headerShown: false, tabBarIcon: () => <Image source={require('../../assets/images/card-play.png')} width={'100%'} height={10} style={{ width: 23, height: 22, }} /> }} />
+            <Bottom.Screen name='Virtual Card' component={Cards} options={{ headerShown: false, tabBarIcon: () => <Image source={require('../../assets/images/card-play.png')} width={'100%'} height={10} style={{ width: 23, height: 22, }} /> }} />
         </Bottom.Navigator>
     )
 }

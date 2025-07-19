@@ -7,7 +7,7 @@ const EmptyRow = ({ name, screen }) => {
 
     const navigation = useNavigation()
     return (
-        <TouchableOpacity style={styles.box} onPress={() => navigation.navigate(screen)}>
+        <TouchableOpacity style={styles.box} onPress={() => navigation.navigate('Transact_opt', { text: name })}>
             <Text style={{ fontSize: 20, color: 'darkslategray' }}>{name}</Text>
 
         </TouchableOpacity>

@@ -16,7 +16,7 @@ const Transact = () => {
                 <Box text={'PAY BENEFICIARY'} />
                 <Box text={'LOANS'} />
                 <Box text={'VOUCHERS'} />
-                <Box text={'EASY EQUITIES'} />
+                <Box text={'EQUITIES'} />
             </ScrollView>
         </View>
     )

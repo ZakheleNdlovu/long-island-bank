@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TouchableOpacity, TextInput, Alert } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, TextInput, Alert, ScrollView } from 'react-native'
 import React, { useState } from 'react'
 import HeaderT from './HeaderT'
 import { useNavigation, useRoute } from '@react-navigation/native'
@@ -209,28 +209,31 @@ const Screen = () => {
         return (
             <View style={{ height: '99%' }}>
                 <HeaderT text={text} />
-                <View style={styles.box1}>
-                    <Box1 text={'1VOUCHER'} />
-                    <Box1 text={'BETWAY'} />
-                    <Box1 text={'GOOGLE PLAYSTORE'} />
-                    <Box1 text={'SHOPRITE'} />
-                    <Box1 text={'SPOTIFY'} />
-                    <Box1 text={'HD MOVIES'} />
-                    <View style={styles.button}>
-                        <Button title='BACK' color={'darkslategray'} onPress={() => navigation.goBack()} />
-                    </View>
+                <View style={styles.box}>
+                    <ScrollView style={{ width: '100%' }} showsVerticalScrollIndicator={false}>
+                        <Box1 text={'1VOUCHER'} />
+                        <Box1 text={'BETWAY'} />
+                        <Box1 text={'GOOGLE PLAYSTORE'} />
+                        <Box1 text={'SHOPRITE'} />
+                        <Box1 text={'SPOTIFY'} />
+                        <Box1 text={'HD MOVIES'} />
+                        <View style={styles.button}>
+                            <Button title='BACK' color={'darkslategray'} onPress={() => navigation.goBack()} />
+                        </View>
+                    </ScrollView>
+
                 </View>
 
             </View>
         )
     }
 
-    if (text.toLowerCase() == 'easy equities') {
+    if (text.toLowerCase() == 'equities') {
         return (
             <View style={{ height: '99%' }}>
                 <HeaderT text={text} />
-                <View style={styles.box1}>
-                    <Text>No investments found.</Text>
+                <View style={styles.box}>
+                    <Text style={styles.text}>No investments found.</Text>
                     <View style={styles.button}>
                         <Button title='Set up an investment plan' color={'darkslategray'} onPress={() => Alert.alert('Error❌', 'We have ran into an unkown error, please try again later')} />
                     </View>
@@ -242,6 +245,7 @@ const Screen = () => {
             </View>
         )
     }
+
 }
 
 const styles = StyleSheet.create({
@@ -286,7 +290,8 @@ const styles = StyleSheet.create({
         textAlign: 'right'
     },
     button: {
-        padding: 10
+        padding: 10,
+        alignSelf: 'center'
     },
     input: {
         width: '60%',

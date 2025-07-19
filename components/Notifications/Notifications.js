@@ -7,7 +7,7 @@ const Notifications = () => {
         <View style={{ height: '100%' }}>
             <Header />
             <View style={styles.box}>
-                <Text>Notifications</Text>
+                <Text>No Notifications</Text>
             </View>
         </View>
     )
@@ -22,7 +22,8 @@ const styles = StyleSheet.create({
         height: '92%',
         alignSelf: 'center',
         marginTop: 5,
-        borderRadius: 10
+        borderRadius: 10,
+        paddingTop: 10
     }
 })
 

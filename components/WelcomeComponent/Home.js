@@ -30,8 +30,8 @@ const Home = () => {
                     <TransactHeader name={'Quick Transactions'} />
                     <EmptyBox text={'Buy Prepaid Mobile'} />
                     <EmptyBox text={'Buy Electricity'} />
-                    <EmptyRow name={'Long-Island Life cover'} screen={'LifeCover'} />
-                    <EmptyRow name={'Long-Island Equities'} screen={'Equity'} />
+                    <EmptyRow name={'Loans'} screen={'LifeCover'} />
+                    <EmptyRow name={'Equities'} screen={'Equity'} />
                     <EmptyBox text={'Pay Beneficiary'} />
                     <EmptyBox text={'Transfer Money'} />
                 </View>

@@ -1,9 +1,13 @@
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import React from 'react'
+import { useNavigation } from '@react-navigation/native'
 
 const EmptyBox = ({ text }) => {
+
+    const navigation = useNavigation()
+
     return (
-        <TouchableOpacity style={styles.box}>
+        <TouchableOpacity style={styles.box} onPress={() => navigation.navigate('Transact_opt', { text: text })}>
             <Text style={{ fontSize: 35, color: 'darkslategray' }}>{text}</Text>
         </TouchableOpacity>
     )
