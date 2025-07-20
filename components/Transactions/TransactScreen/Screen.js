@@ -38,8 +38,7 @@ const Screen = () => {
 
     function Prepaid({ name }) {
         return (
-            <TouchableOpacity style={styles.row}>
-
+            <TouchableOpacity style={styles.row} onPress={() => navigation.navigate('next', { text: name })}>
                 <Text style={styles.text}>{name}</Text>
             </TouchableOpacity>
         )

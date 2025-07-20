@@ -12,6 +12,7 @@ import Transact from '../Transactions/Transact'
 import Life from '../WelcomeComponent/LifeCover/Life'
 import Invest from '../WelcomeComponent/Equities/Invest'
 import Screen from '../Transactions/TransactScreen/Screen'
+import Screen2 from '../Transactions/TransactScreen/Screen2'
 
 
 const Stack = createStackNavigator()
@@ -25,6 +26,7 @@ function StackNavigator1() {
             <Stack.Screen name='LifeCover' component={Life} options={{ headerShown: false }} />
             <Stack.Screen name='Equity' component={Invest} options={{ headerShown: false }} />
             <Stack.Screen name='Transact_opt' component={Screen} options={{ headerShown: false }} />
+            <Stack.Screen name='next' component={Screen2} options={{ headerShown: false }} />
         </Stack.Navigator>
     )
 }
@@ -35,6 +37,7 @@ function TransactStack() {
             <Stack.Screen name='Transact' component={Transact} options={{ headerShown: false }} />
             <Stack.Screen name='Transact_opt' component={Screen} options={{ headerShown: false }} />
             <Stack.Screen name='BalanceScreen' component={Balance} options={{ headerShown: false }} />
+            <Stack.Screen name='next' component={Screen2} options={{ headerShown: false }} />
         </Stack.Navigator>
     )
 }
@@ -43,7 +46,7 @@ function BottomNavigator() {
     return (
         <Bottom.Navigator screenOptions={{ headerShadowVisible: false, tabBarInactiveBackgroundColor: 'darkslategray', tabBarActiveBackgroundColor: 'darkslategray', tabBarActiveTintColor: 'white' }}>
             <Bottom.Screen name='Home' component={StackNavigator1} options={{ headerShown: false, tabBarIcon: () => <Image source={require('../../assets/images/earth.png')} width={'100%'} height={10} style={{ width: 23, height: 22, }} /> }} />
-            <Bottom.Screen name='Transact' component={TransactStack} options={{ headerShown: false, tabBarIcon: () => <Image source={require('../../assets/images/coins.png')} width={'100%'} height={10} style={{ width: 23, height: 22, }} /> }} />
+            <Bottom.Screen name='Transactions' component={TransactStack} options={{ headerShown: false, tabBarIcon: () => <Image source={require('../../assets/images/coins.png')} width={'100%'} height={10} style={{ width: 23, height: 22, }} /> }} />
             <Bottom.Screen name='Notifications' component={Notifications} options={{ headerShown: false, tabBarIcon: () => <Image source={require('../../assets/images/calendar.png')} width={'100%'} height={10} style={{ width: 23, height: 22, }} /> }} />
             <Bottom.Screen name='Virtual Card' component={Cards} options={{ headerShown: false, tabBarIcon: () => <Image source={require('../../assets/images/card-play.png')} width={'100%'} height={10} style={{ width: 23, height: 22, }} /> }} />
         </Bottom.Navigator>

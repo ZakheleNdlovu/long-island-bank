@@ -7,7 +7,7 @@ const Box1 = ({ text }) => {
 
     const navigation = useNavigation()
     return (
-        <TouchableOpacity style={styles.box} >
+        <TouchableOpacity style={styles.box} onPress={() => navigation.navigate('next', { text: text })}>
             <Text style={{ fontSize: 25, color: 'darkslategray', textAlign: 'center' }}>{text}</Text>
         </TouchableOpacity>
     )

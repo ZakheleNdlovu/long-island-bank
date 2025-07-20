@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TouchableOpacity, ImageBackground } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, ImageBackground, Alert } from 'react-native'
 import React from 'react'
 
 const Card = ({ acc_num }) => {
@@ -35,7 +35,7 @@ const Card = ({ acc_num }) => {
     })
 
     return (
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => Alert.alert('Error', 'Unable to view card information, please try again later')}>
             <View style={styles.box}>
                 <ImageBackground source={require('../../../assets/images/oasis.png')} style={styles.imgbg} tintColor={'lightgreen'}>
                     <View>
